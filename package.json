@@ -1,12 +1,25 @@
 {
-  "name": "llcomment-v3-back",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "llcomment-v3-back",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"dev": "tsx --watch src/index.ts",
+		"start": "node src/index.ts",
+		"biome": "pnpm exec biome check --write ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^5.1.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.0.6",
+		"@types/express": "^5.0.3",
+		"@types/node": "^24.0.10",
+		"tsx": "^4.20.3",
+		"typescript": "^5.8.3"
+	}
 }
