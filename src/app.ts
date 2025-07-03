@@ -1,14 +1,14 @@
-import dotenv from "dotenv";
-import express from "express";
-import { connectDB } from "./db/config";
-import { publicRoutes } from "./routes";
+import dotenv from 'dotenv';
+import express from 'express';
+import { connectDB } from './db/config';
+import { publicRoutes } from './routes';
 
 //middlewares
 dotenv.config({
 	path:
-		process.env.NODE_ENV === "production"
-			? ".env.production.local"
-			: ".env.development.local",
+		process.env.NODE_ENV === 'production'
+			? '.env.production.local'
+			: '.env.development.local',
 });
 
 const app = express();
@@ -17,10 +17,10 @@ const app = express();
 connectDB();
 
 // Public routes
-app.use("/", publicRoutes);
+app.use('/', publicRoutes);
 
-app.get("/", (_req, res) => {
-	res.send("Hello World!");
+app.get('/', (_req, res) => {
+	res.send('Hello World!');
 });
 
 export default app;

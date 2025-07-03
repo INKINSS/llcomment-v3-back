@@ -1,1 +1,1 @@
-export * from "./publics.controller";
+export * from './publics.controller';

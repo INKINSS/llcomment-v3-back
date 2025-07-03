@@ -1,5 +1,7 @@
-import express from 'express'
+import express from 'express';
+
 const router = express.Router();
+
 import { dashboard } from '../controllers';
 
 router.get('/', dashboard);

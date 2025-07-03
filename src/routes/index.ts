@@ -1,1 +1,1 @@
-export * from "./publics.routes";
+export * from './publics.routes';
