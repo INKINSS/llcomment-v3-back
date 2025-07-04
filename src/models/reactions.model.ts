@@ -17,6 +17,8 @@ export const reactionSchema = new Schema(
 	},
 );
 
-const ReactionModel = mongoose.model('Reaction', reactionSchema, 'reactions');
-
-export default ReactionModel;
+export const ReactionModel = mongoose.model(
+	'Reaction',
+	reactionSchema,
+	'reactions',
+);
