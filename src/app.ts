@@ -1,9 +1,14 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import { connectDB } from './db/config';
-import { publicRoutes } from './routes';
+import routes from './routes';
+
+const app = express();
 
 //middlewares
+app.use(express.json());
+
+//config
 dotenv.config({
 	path:
 		process.env.NODE_ENV === 'production'
@@ -11,13 +16,11 @@ dotenv.config({
 			: '.env.development.local',
 });
 
-const app = express();
+//routes
+app.use('/api', routes);
 
 // Connect to MongoDB
 connectDB();
-
-// Public routes
-app.use('/', publicRoutes);
 
 app.get('/', (_req, res) => {
 	res.send('Hello World!');
