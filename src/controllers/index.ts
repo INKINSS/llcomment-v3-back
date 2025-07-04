@@ -1,1 +1,2 @@
-export * from './publics.controller';
+export * from './post/posts.controller';
+export * from './public/publics.controller';
